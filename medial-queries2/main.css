@@ -1,3 +1,83 @@
 body {
   background: papayawhip;
 }
+* {
+  border: 2px solid blue;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  font-family: sans-serif;
+  font-size: 45px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: flex-start;
+  gap: .5em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/* New Grouping for use in @media query */
+.container2 {
+  width: 100%;
+  min-height: 50vh;
+  font-family: sans-serif;
+  font-size: 45px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: .5em;
+  margin: none;
+  border-style: none;
+}
+.a {
+  background-color: lightskyblue;
+  height: 20vh;
+  width: 100%;
+  flex-basis: 99%;
+}
+.b {
+  background-color: lightskyblue;
+  height: 38vh;
+  width: 100%;
+  flex-basis: 99%;
+}
+.c, .d, .e {
+  background-color: lightskyblue;
+  height: 19vh;
+  width: 22%;
+  flex-basis: 31%;
+}
+.f {
+  background-color: lightskyblue;
+  height: 20vh;
+  width: 100%;
+  flex-basis: 99%;
+}
+@media screen and (min-device-width: 600px) {
+  .a {
+    height: 32vh;
+    flex-basis: 99%;
+  }
+  .container2 {
+    height: 66vh;
+    width: 66%; 
+    margin: none;
+    padding: none;
+  }
+  .b {
+    height: 32vh;
+    flex-basis: auto;
+  }
+  .c, .d, .e {
+    height: 30vh;
+    flex-basis: 30%;
+  }
+  .f {
+    height: 65vh;
+    flex-basis: 31%;
+  }
+}
